@@ -86,7 +86,8 @@ body {
   text-decoration: none;
 }
 
-.navMenu ul li a:hover {
+.navMenu ul li a:hover,
+.animals-grid a:hover {
   color: var(--accent);
   font-weight: bold;
 }
@@ -138,6 +139,11 @@ main {
   margin: 32px 0px 32px 0px;
 }
 
+.animals-grid a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
 .animals-card {
   /* width: 100%; */
   height: 100%;
@@ -171,4 +177,41 @@ main {
 .animals-card p {
   font-size: 1rem;
   color: #555;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(14, 12, 9, 0.5);
+  padding: 80px 80px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 16px;
+}
+
+.hero-overlay h1 {
+  color: var(--background-color);
+  font-size: var(--fs-h1);
+  margin: 0;
+}
+
+.hero-overlay p {
+  color: var(--background-color);
+  font-size: var(--fs-base);
+  margin: 0;
 }
