@@ -74,8 +74,8 @@ nav a.active {
 
 .zoo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem; 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
 }
 
 .animal-card {
@@ -98,4 +98,28 @@ nav a.active {
   margin: 0.9rem 0 0.4rem;
   font-size: 1.1rem;
   color: #2c3e50;
+}
+
+.animal-detail {
+  max-width: 900px;
+  margin: 2rem auto; 
+  padding: 1.25rem; 
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .detail-grid { grid-template-columns: 1fr; }
+}
+
+.animal-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
