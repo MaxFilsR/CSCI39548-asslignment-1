@@ -1,170 +1,184 @@
+
 body {
+    background-color: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #333;
+    line-height: 1.6;
 }
 
 h2 {
     text-align: center;
-    color: black;
-    font-size: 40px;
-    margin: 20px ;
-}
-.Zoo-footer{
-    width: 100%;
-    margin-left:0;
-    margin-right:0;
-    background-color: #2c3e50;
-    color : white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: auto;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: 30px 0;
+    font-weight: 600;
+    position: relative;
 }
 
-.Zoo-footer h3{
-    color: white;
-    font-size: 20px;
-    margin: 0;
-    font-weight: bold;
+h2:after {
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f39c12;
+    margin: 15px auto;
+    border-radius: 2px;
 }
-.Zoo-footer p{
-    margin: 2px 0 0 0;
-    font-size: 14px;
-    color: white;
-}
-.Zoo-footer .highlight {
-    color: #feca57;
-}
+
 .Zoo-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  15px 30px;
-    /* background-color: white; */
-    margin : 0px;
-    width: 100%;
-    box-sizing: border-box;
-    /* border-bottom: 1px solid #ccc; */
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 .navigation-left h1 {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 28px;
     margin: 0;
 }
+
 .highlight {
-    color: #feca57;
+    color:  #f39c12;;
 }
-.navigation-right a{
+
+.navigation-right a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color:#2c3e50;
+    font-weight: 600;
     font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
+
+.navigation-right a:hover {
+    background-color:  #f39c12;;
+    color: white;
+}
+
 .animals-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-    flex: 1;
-   
+    gap: 40px;
+    align-items:start; 
 }
+
 .animal-card {
     position: relative;
-    border: 2px solid white;
     border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-   
+    background: transparent; 
 }
+
+.animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .animal-card img {
     width: 100%;
-    height: 280px;
+    height: 500px;
     object-fit: cover;
     object-position: center center !important;
     border-radius: 0px;
     transition: transform 0.3s ease;
-    
-}
-.animal-name {
-    margin-top: 10px;
-    font-size: 20px;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color:black ;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
-}
-.animal-name:hover {
-    transform: translateY(-10px);
-    color: #feca57;
-    text-decoration-color: #feca57;
-    box-shadow: #feca57;
-}
-.animal-card:hover .animal-name{
-    color: #feca57;
-    text-decoration-color: #feca57;
-    box-shadow: #feca57;
-}
-.animal-card:hover img {
-    transform: scale(1.05);
 }
 
-html, body {
-    height: 100%;
+.animal-card:hover img {
+    transform: scale(0.8);
 }
-.animal-details {
-    max-width: 800px;
-    margin:0 auto;
-    padding: 20px;
-    flex: 1 0 auto;
+
+.animal-name {
+    padding: 0px;
+    font-size: 30px;
+    color: #2c3e50;
+    font-weight: 30;
+    text-align: center;
+    transition: all 0.3s ease; 
+    background: transparent;
 }
-.animal-detail-image {
-    object-position: center center !important;
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
+
+.animal-card:hover .animal-name {
+    color:  #f39c12;;
 }
-.Zoo-navigation{
-    display: flex;
-    gap:20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    align-items: stretch;
+
+.animal-link {
+    text-decoration: none;
 }
-.animal-detail{
+.animal-detail {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.animal-detail-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
 }
-.animal-detail img{
-    display: block;
-    margin: 0 auto 20px auto;
+
+.animal-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
-.animal-info{
-    text-align: center;
+
+.animal-detail-image {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.animal-detail h2{
+
+.animal-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.animal-info p:last-child {
+    margin-bottom: 0;
+}
+
+.Zoo-footer {
+    background-color:#2c3e50;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 40px 20px;
+    margin-top: auto;
 }
 
+.Zoo-footer h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.Zoo-footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
