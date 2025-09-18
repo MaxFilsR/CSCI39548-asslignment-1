@@ -1,4 +1,5 @@
-
+/* File: khadijaStyles.css */
+/* Description: CSS styles for Khadija's Zoo website */
 body {
     background-color: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,6 +11,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
+/* Header styles */
 
 h2 {
     text-align: center;
@@ -19,6 +21,7 @@ h2 {
     font-weight: 600;
     position: relative;
 }
+/* Decorative underline for h2 */
 
 h2:after {
     display: block;
@@ -28,6 +31,7 @@ h2:after {
     margin: 15px auto;
     border-radius: 2px;
 }
+/* navigation barstyles */
 
 .Zoo-navigation {
     display: flex;
@@ -40,7 +44,7 @@ h2:after {
     top: 0;
     z-index: 100;
 }
-
+/* left side of the navigation bar */
 .navigation-left h1 {
     text-decoration: none;
     color:rgb(79, 41, 2);
@@ -52,6 +56,7 @@ h2:after {
 .highlight {
     color: rgba(75,150,0);
 }
+/* right side of the navigation bar */
 
 .navigation-right a {
     text-decoration: none;
@@ -63,17 +68,19 @@ h2:after {
     transition: all 0.3s ease;
 }
 
+
 .navigation-right a:hover {
     background-color: rgba(75,150,0);
     color: white;
 }
-
+/* main content styles */
 .animals-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     align-items:start; 
 }
+/* individual animal card styles */
 
 .animal-card {
     position: relative;
@@ -83,6 +90,7 @@ h2:after {
     transition: transform 0.3s, box-shadow 0.3s;
     background: transparent; 
 }
+/* hover effect for animal cards */
 
 .animal-card:hover {
     transform: translateY(-5px);
